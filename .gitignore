@@ -1,0 +1,14 @@
+.idea
+*.iml
+.DS_STORE
+out
+*.pyc
+target
+*.log
+logs
+python-env
+.chalice/venv
+.chalice/deployments
+node_modules
+argon-api/chalicelib/usf/*.json
+voter_count_analysis
