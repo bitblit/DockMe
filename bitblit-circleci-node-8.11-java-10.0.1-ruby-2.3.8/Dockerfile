@@ -83,7 +83,7 @@ RUN aws --v
 RUN cd /opt && sudo wget https://download.java.net/java/GA/jdk10/10.0.1/fb4372174a714e6b8c52526dc134031e/10/openjdk-10.0.1_linux-x64_bin.tar.gz
 RUN cd /opt && sudo tar -xvzf openjdk-10.0.1_linux-x64_bin.tar.gz
 RUN cd /opt && sudo rm openjdk-10.0.1_linux-x64_bin.tar.gz
-ENV PATH="/opt/jdk-10.0.1/bin:${PATH}"
+ENV JAVA_HOME="/opt/jdk-10.0.1"
 
 # The OpenAPI generator
 RUN cd /opt && sudo mkdir openapi
@@ -93,10 +93,15 @@ COPY openapi-generator-cli-3.3.0.jar /opt/openapi
 RUN wget -O ruby-install-0.7.0.tar.gz https://github.com/postmodern/ruby-install/archive/v0.7.0.tar.gz
 RUN tar -xzvf ruby-install-0.7.0.tar.gz
 RUN cd ruby-install-0.7.0/ && sudo make install
-RUN sudo apt-get update && sudo ruby-install ruby 2.3
+RUN sudo apt-get update && ruby-install ruby 2.3.8
 ENV RUBY_HOME="/opt/rubies/ruby-2.3.8"
-ENV PATH="${RUBY_HOME}/bin:${PATH}"
-RUN sudo ${RUBY_HOME}/bin/gem install bundler
+ENV PATH="${JAVA_HOME}/bin:${RUBY_HOME}/bin:${PATH}"
+ENV INCLUDE_PATH="${PATH}"
+RUN gem install bundler
+# Bring in middleman for site generation
+RUN gem install middleman
+RUN gem install middleman-livereload
+RUN gem install middleman-minify-html
 
 # END IMAGE CUSTOMIZATIONS
 
