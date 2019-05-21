@@ -26,3 +26,13 @@ Same as above, but also includes Ruby and Bundler for cases when those are neces
 
 Same as bitblit-circleci-node-8.11-java-10.0.1, but includes Python 3.5 (Yeah, this
 is an error for the moment) and the AWS elastic beanstalk cli.
+
+### bitblit-php-7.3.3-apache-gd-ffmpg-mysql
+
+This image was originally for Adomni - sets up a LAMP server (Linux/Apache/Mysql/Php) with built in support
+for GD (the graphics library), ffmpg (for video manipulation) and mysql.
+
+### bitblit-php-7.3-swoole-4.2.9-composer
+
+This image also originally built for Adomni (edge) and has php with swoole (the API serving library) and composer
+support built in.
