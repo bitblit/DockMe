@@ -39,7 +39,7 @@ RUN touch /usr/local/etc/php/conf.d/swoole.ini && \
 # Pipe PHP Errors out
 RUN touch /usr/local/etc/php/conf.d/errors.ini && \
     echo "log_errors = On" >> /usr/local/etc/php/conf.d/errors.ini && \
-    echo "error_log = /dev/stderr" >> /usr/local/etc/php/conf.d/errors.ini
+    echo "error_log = /var/log/swoole" >> /usr/local/etc/php/conf.d/errors.ini
 
 # Bring in php Composer
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
