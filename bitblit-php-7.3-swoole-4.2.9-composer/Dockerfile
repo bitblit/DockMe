@@ -40,6 +40,12 @@ RUN touch /usr/local/etc/php/conf.d/swoole.ini && \
 RUN touch /usr/local/etc/php/conf.d/errors.ini && \
     echo "log_errors = On" >> /usr/local/etc/php/conf.d/errors.ini && \
     echo "error_log = /var/log/swoole" >> /usr/local/etc/php/conf.d/errors.ini
+    
+# Bring in Imagick
+RUN apt-get update && apt-get install -y \
+    libmagickwand-dev --no-install-recommends \
+    && pecl install imagick \
+    && docker-php-ext-enable imagick
 
 # Bring in php Composer
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
