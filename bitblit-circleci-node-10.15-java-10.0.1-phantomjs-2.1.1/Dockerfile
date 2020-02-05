@@ -87,7 +87,7 @@ ENV PATH="/opt/jdk-10.0.1/bin:${PATH}"
 
 # Setup the openapi generator
 RUN cd /opt && sudo mkdir openapi
-COPY openapi-generator-cli-3.3.0.jar /opt/openapi
+COPY openapi-generator-cli-4.1.3.jar /opt/openapi
 
 # Add phantomjs
 RUN cd /opt && sudo wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-linux-x86_64.tar.bz2

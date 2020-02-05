@@ -5,7 +5,7 @@ My docker images for public consumption
 See : https://ropenscilabs.github.io/r-docker-tutorial/04-Dockerhub.html
 
 Roughly:
-1. Build the image (note the image id)
+1. Build the image (note the image id) (**docker build .**)
 1. Log in to Dockerhub and create a repo (if you haven't already)
 1. Tag the image : **docker tag DOCKER_HASH DOCKER_NAME:latest** 
    * e.g., **docker tag 70d42dbe4246 bitblit/circleci-node-8.11-java-10.0.1-python-3.7-elastic-beanstalk:latest**
