@@ -12,6 +12,13 @@ Roughly:
 1. Push the image to the repo  e.g. **docker push bitblit/circleci-node-8.11-java-10.0.1-python-3.7-elastic-beanstalk**
 
 
+## bitblit-circleci-node-12.14-java-10.0.1-chrome-81-yarn1.22
+
+This image is for my CircleCI builds that need to have both NodeJS and Java - which is anything where I am building
+a Typescript based API Gateway + its client libraries, for which I use the OpenAPI generator.  Also includes the
+AWS CLI, for obvious reasons.  Includes Chrome headless as well for Puppeteer use.
+
+
 ## bitblit-circleci-node-8.11-java-10.0.1
 
 This image is for my CircleCI builds that need to have both NodeJS and Java - which is anything where I am building

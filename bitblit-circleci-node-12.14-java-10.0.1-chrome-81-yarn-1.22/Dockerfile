@@ -93,9 +93,6 @@ COPY openapi-generator-cli-4.2.3.jar /opt/openapi
 RUN sudo apt install yarn
 RUN yarn --version
 
-# Add puppeteer
-# RUN sudo yarn global add puppeteer
-# RUN puppeteer --version
 # Add Headless Chrome
 RUN sudo apt-get install -y libappindicator3-1 fonts-liberation libasound2 libatk-bridge2.0-0 \
     libatspi2.0-0 libgbm1 libgtk-3-0 libnspr4 libnss3 libxss1 libxtst6 xdg-utils
