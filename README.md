@@ -11,6 +11,23 @@ Roughly:
    * e.g., **docker tag 70d42dbe4246 bitblit/circleci-node-8.11-java-10.0.1-python-3.7-elastic-beanstalk:latest**
 1. Push the image to the repo  e.g. **docker push bitblit/circleci-node-8.11-java-10.0.1-python-3.7-elastic-beanstalk**
 
+## Helpful commands
+
+List images
+```
+docker images
+```
+
+Start an image in interactive mode
+```
+docker run -it {CONTAINER_ID} bash 
+```
+
+## bitblit-circleci-node-14.15-java-10.0.1-chrome-88-yarn1.22-aws2
+
+Just like the bitblit-circleci-node-14.15-java-10.0.1-chrome-88-yarn1.22 build, but uses AWS CLI v2 instead of 
+V1.
+
 ## bitblit-circleci-node-14.15-java-10.0.1-chrome-88-yarn1.22
 
 Just like the bitblit-circleci-node-12.14-java-10.0.1-chrome-81-yarn1.22 build, but updates Node to use the
