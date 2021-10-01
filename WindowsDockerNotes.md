@@ -1,0 +1,1 @@
+from mcr.microsoft.com/windows/nanoserver:2022
