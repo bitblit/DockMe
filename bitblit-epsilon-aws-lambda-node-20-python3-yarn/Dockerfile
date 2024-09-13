@@ -1,4 +1,4 @@
-FROM public.ecr.aws/lambda/nodejs:20.2024.07.10.10
+FROM public.ecr.aws/lambda/nodejs:20.2024.09.05.16
 
 # Enables building yarn native dependencies
 RUN dnf -y install python3
