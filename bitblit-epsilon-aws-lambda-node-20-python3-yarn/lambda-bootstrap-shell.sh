@@ -16,7 +16,7 @@ if [ -z "${EPSILON_RUNNING_IN_AWS_BATCH}" ]; then
       exec $RUNTIME_ENTRYPOINT
     fi
   else
-    echo "Running Epsilon inside AWS batch - triggering direct $1 $2"
-    exec node dist/aws-batch-cli.js --process $1 --data $2
+    echo "Running Epsilon inside AWS batch - triggering direct $1 $2 $3 $4 $5 : $EPSILON_AWS_BATCH_CLI_JS_PATH"
+    exec node $EPSILON_AWS_BATCH_CLI_JS_PATH --process $1 --taskDataBase64 $2 --traceId $3 --traceDepth $4 --taskMetaDataBase64 $5
 fi
 

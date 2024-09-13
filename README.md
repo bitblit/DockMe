@@ -23,6 +23,9 @@ Start an image in interactive mode
 docker run -it {CONTAINER_ID} bash 
 ```
 
+## bitblit-epsilon-aws-lambda-node-20-python3-yarn
+An extension of AWS Lambda on Node20, with python3, yarn, epsilon bootstrapper already installed.
+
 ## bitblit-circleci-node-14.15-java-10.0.1-chrome-88-yarn1.22-aws2
 
 Just like the bitblit-circleci-node-14.15-java-10.0.1-chrome-88-yarn1.22 build, but uses AWS CLI v2 instead of 
