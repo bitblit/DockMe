@@ -67,3 +67,8 @@ for GD (the graphics library), ffmpg (for video manipulation) and mysql.
 
 This image also originally built for Adomni (edge) and has php with swoole (the API serving library) and composer
 support built in.
+
+### bitblit-pepsilon-aws-lambda-python-3-12
+
+Like my node epsilon images, but this one is more meant for running python natively and will eventually probably have the 
+pepsilon python libs on it by default
