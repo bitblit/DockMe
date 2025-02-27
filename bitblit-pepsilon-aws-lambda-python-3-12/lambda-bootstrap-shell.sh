@@ -17,6 +17,6 @@ if [ -z "${EPSILON_RUNNING_IN_AWS_BATCH}" ]; then
     fi
   else
     echo "Running Epsilon inside AWS batch - triggering direct $1 $2 $3 $4 $5 : $EPSILON_AWS_BATCH_CLI_PY_PATH"
-    exec python $EPSILON_AWS_BATCH_CLI_PY_PATH --process $1 --taskDataBase64 $2 --traceId $3 --traceDepth $4 --taskMetaDataBase64 $5
+    exec python -m $EPSILON_AWS_BATCH_CLI_PY_PATH --process $1 --taskDataBase64 $2 --traceId $3 --traceDepth $4 --taskMetaDataBase64 $5
 fi
 
